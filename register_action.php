@@ -2,13 +2,9 @@
 
 include("db.php");
 
-print_r ($_REQUEST);
-
-/*if(!isset($_POST['submitok'])) {
-    // Display the user signup form
-    header("Location: register.php");
-}
-else {
+print_r ($_POST);
+/*
+if {
     // Process signup submission
     $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 
@@ -33,7 +29,7 @@ else {
     }
 
 
-    $userid  = $_POST["username"];
+    $username  = $_POST["username"];
     $email    = $_POST["email"];
     $password   = $_POST["password"];
     $password_corfirmed= $_POST["password-confirmed"];
