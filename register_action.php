@@ -2,53 +2,40 @@
 
 include("db.php");
 
-print_r ($_POST);
-/*
-if {
+
+
     // Process signup submission
     $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 
-    if( $_POST['name']    == '' or
-        $_POST['email']  == '' or
-        $_POST['password'] == '' ) {
-        header("Location: register.php?m=1");
-        exit;
-    }
 
-
-
-    // Check for existing user with the new id
-    $query = "SELECT * FROM users WHERE userid = '" .$_POST[newid] ."'";
-    $result = @ mysql_query($query,$db);
-    if(!$result)
+    $username  = $_POST['username'];
+    $email    = $_POST['email'];
+    $password   = $_POST['password'];
+    $password_corfirmed= $_POST['password-confirmed'];
+    $password_final= substr(md5($_POST['password']),0,32);
+           
+    $queryemail=" SELECT * from users where email= $email";
+    if(!(@ mysql_select_db($queryemail,$db))){
         showerror();
-
-    if(mysql_num_rows($result) > 0) {
-        header("Location: register.php?m=2");
-        exit;
     }
 
-
-    $username  = $_POST["username"];
-    $email    = $_POST["email"];
-    $password   = $_POST["password"];
-    $password_corfirmed= $_POST["password-confirmed"];
-    $password_final= substr(md5($_POST['password']),0,32)
-    $present_date = date("Y-m-d H:i:s");
-
-    $sql_insert = "INSERT INTO users(name, email, created_at, updated_at, password_digest)
-                 VALUES('$userid','$email','$present_date','$present_date','$password_final')";
-        $result=mysql_query($db,$sql_insert);
-    if(!$result)
-        showerror();
-    else
-    {
-        header("Location: register_sucess.html");
+    if ($password!=$password_corfirmed) {
+      $ErrorType=4; 
+      header("Location: $register.php?Error=$Error&Email=$Email&Username=$Username");
     }
-    // Close database
+
+    elseif (empty($password)|| empty($password_corfirmed)) {
+        $ErrorType=3;
+      header("Location: $register.php?Error=$Error&Email=$Email&Username=$Username"); 
+    }
+
+    elseif (empty($password) && empty($password_corfirmed) && empty($username) && empty(email)) {
+       $ErrorType=0;
+       header("Location: $register.php?Error=$Error");
+    }
+
+    $sql_insert = "INSERT INTO users(name, email, created_at, updated_at, password_digest) VALUES('$username','$email',NOW(),NOW(),'$password_final')";
     mysql_close($db);
 
 
-
-}*/
 ?>

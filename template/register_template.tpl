@@ -63,19 +63,19 @@
                 <h1>Register</h1>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input id="user" type="text" class="form-control" name="username" placeholder="Username" VALUE="{$Name}" >
+                    <input id="user" type="text" class="form-control" name="username" placeholder="Username" value="{$name}" required="">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" VALUE="{$Email}">
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" value="{$email}" required="">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password"  value="{$password}"required>
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="password-confirmed" type="password" class="form-control" name="password-confirmed" placeholder="Password Confirmation" required>
+                    <input id="password-confirmed" type="password" class="form-control" name="password-confirmed" placeholder="Password Confirmation" value= "{$password-confirmed}" required>
                 </div>
                 <br>
                 <hr>

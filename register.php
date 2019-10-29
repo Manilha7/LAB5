@@ -1,33 +1,24 @@
 <?php
 
-include 'db.inc';
+session_start();
 
-//
-//   obtain form data
-//
-$nome = $_POST["nome"];
-$email = $_POST["email"];
-$password = $_POST["password"];
-$passwordconfirmed = $_POST["passwordconfirmed"];
+// put full path to Smarty.class.php
+require_once('/usr/share/php/smarty/libs/Smarty.class.php');
+$smarty = new Smarty();
 
-//
-// ligacao a base de dados
-//
-$db = dbconnect($connection_string);
-if($db) {
-    // criar a instrucao de SQL para inserir o tuplo
-    $tuplo = "('$nome', $email, $password, $passwordconfirmed)";
-    $sql_stmt  = "INSERT INTO baseLab4 VALUES $tuplo";
+$smarty->template_dir = 'templates';
+$smarty->compile_dir = 'templates_c';
 
-    // executar a instrucao
-    if( @pg_query($db, $sql_stmt ))
-        $querystring = "Location: register_sucess.html?status=T&tuple=" . urlencode($tuplo);
-    else
-        $querystring = "Location: resultado.php?status=F";
-    header($querystring);
+function errorMensage($ErrorType){
+    if ($ErrorType==0) {
+        
+    }
+}
+
 
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");
+    $smarty->display('signup_template.tpl');
 }
 ?>
