@@ -20,5 +20,4 @@ function errorMensage($ErrorType){
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");
     $smarty->display('signup_template.tpl');
-}
 ?>

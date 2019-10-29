@@ -18,6 +18,10 @@ include("db.php");
     if(!(@ mysql_select_db($queryemail,$db))){
         showerror();
     }
+    $findemail=mysql_m
+    if () {
+    	# code...
+    }
 
     if ($password!=$password_corfirmed) {
       $ErrorType=4; 
