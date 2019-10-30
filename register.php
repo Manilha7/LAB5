@@ -6,8 +6,6 @@ $smarty = new Smarty();
 
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
-$smarty->cache_dir = 'cache';
-$smarty->config_dir = 'configs';
 
 function errorMensage($ErrorNumber){
     if ($ErrorNumber==0) {
@@ -17,7 +15,6 @@ function errorMensage($ErrorNumber){
 	
 	
     if (isset($_GET['Error'])) {
-    	print_r($_GET);
 		$username=$_GET['username'];
      	$email=$_GET['email'];
 	}	
