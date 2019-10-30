@@ -44,7 +44,7 @@ include 'db.php';
        header("Location: register.php?Error=$ErrorNumber");
     }
     else{
-        $sql_insert = "INSERT INTO users(name, email, password_digest, created_at, updated_at,) VALUES('$username','$email','$password_final',NOW(),NOW())";
+        $sql_insert = "INSERT INTO users(name, email, password_digest, created_at, updated_at) VALUES('$username','$email','$password_final',NOW(),NOW())";
         $ins= @ mysql_query($sql_insert,$db); 
         header("Location: register_success.html");
         }
