@@ -7,11 +7,16 @@ $smarty = new Smarty();
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
 
-function errorMensage($Error){
-    if ($Error==0) {
+function errorMensage($ErrorNumber){
+    if ($ErrorNumber==0) {
         
     }
-}
+}	
+	$smarty ->assign("ErrorNumber",$_POST['ErrorNumber']);
+	if ($ErrorNumber)) {
+		$username=$_POST['username'];
+     	$email=$_POST['email'];
+	}
 
 	$smarty ->assign("username","$username");
 	$smarty ->assign("email","$email");

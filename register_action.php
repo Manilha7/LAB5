@@ -25,23 +25,23 @@ include 'db.php';
     $nrows  = mysql_num_rows($result);
     print_r($nrows);
     if ($nrows>0) {
-        $Error=1;
-        header("Location: register.php?Error=$Error&username=$username");
+        $ErrorNumber=1;
+        header("Location: register.php?Error=$ErrorNumberN&username=$username");
     }
 
     elseif ($password!=$password_corfirmed) {
-      $Error=4; 
-      header("Location: register.php?Error=$Error&email=$email&username=$username");
+      $ErrorNumber=4; 
+      header("Location: register.php?Error=$ErrorNumber&email=$email&username=$username");
     }
 
     elseif (empty($password) || empty($password_corfirmed)) {
-        $Error=3;
-      header("Location: register.php?Error=$Error&Email=$Email&Username=$Username"); 
+        $ErrorNumber=3;
+      header("Location: register.php?Error=$ErrorNumber&Email=$Email&Username=$Username"); 
     }
 
     elseif (empty($password) && empty($password_corfirmed) && empty($username) && empty(email)) {
-       $Error=0;
-       header("Location: register.php?Error=$Error");
+       $ErrorNumber=0;
+       header("Location: register.php?Error=$ErrorNumber");
     }
     else{
         $sql_insert = "INSERT INTO users(name, email, created_at, updated_at, password_digest) VALUES('$username','$email',NOW(),NOW(),'$password_final')"; 
