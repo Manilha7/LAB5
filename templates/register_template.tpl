@@ -54,6 +54,13 @@
         </div>
     </div>
 </nav>
+<div>
+{if $isError eq 1 }
+    <div class="alert alert-danger">
+      <p style="text-align: center">{$Error}</p>
+    </div>
+    {/if}
+     </div>
 <form method="POST" ACTION="register_action.php">
     <div class="container text-center">
         <div class="row content">
