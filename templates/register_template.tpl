@@ -75,7 +75,7 @@
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="password-confirmed" type="password" class="form-control" name="password-confirmed" placeholder="Password Confirmation" value= "{$password-confirmed}">
+                    <input id="password-confirmed" type="password" class="form-control" name="password-confirmed" placeholder="Password-Confirmation" value= "{$password-confirmed}">
                 </div>
                 <br>
                 <hr>
