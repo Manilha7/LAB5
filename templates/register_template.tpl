@@ -21,7 +21,7 @@
         }
 
         .carousel-inner img {
-            width: 50%; /* Set width to 100% */
+            width: 50%; /* Set width to 100% */''
             margin: auto;
             min-height:100px;
         }
@@ -67,15 +67,15 @@
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{$email}" >
+                    <input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{$email}">
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="password" type="password" class="form-control" name="password" placeholder="Password"  value="{$password}" >
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password"   >
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="password-confirmed" type="password" class="form-control" name="password-confirmed" placeholder="Password-Confirmation" value= "{$password-confirmed}">
+                    <input id="password-confirmed" type="password" class="form-control" name="password-confirmed" placeholder="Password-Confirmation" >
                 </div>
                 <br>
                 <hr>

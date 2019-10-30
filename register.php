@@ -25,8 +25,7 @@ function errorMensage($ErrorNumber){
 	$smarty ->assign("ErrorNumber",$_POST['ErrorNumber']);
 	$smarty ->assign("username","$username");
 	$smarty ->assign("email","$email");
-	$smarty ->assign("password","");
-	$smarty ->assign("password-confirmed","");
+
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");
