@@ -55,8 +55,10 @@
     </div>
 </nav>
 <div>
-    {if $ErrorNumber >-1 }
+    {if $ErrorNumber > -1 }
     <div class="alert alert-danger">
+        <p style="text-align: center">{$MensageError}</p>
+    </div>
         {/if}
     </div>
 <form method="POST" action="register_action.php">
