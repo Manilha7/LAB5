@@ -54,10 +54,6 @@
         </div>
     </div>
 </nav>
-<div>
-  {if $Error >=0}
-    <div class="alert alert-danger">
-</div>
 <form method="POST" ACTION="register_action.php">
     <div class="container text-center">
         <div class="row content">
