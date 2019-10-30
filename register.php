@@ -1,11 +1,13 @@
 <?php
 
 // put full path to Smarty.class.php
-require_once('/usr/share/php/smarty/libs/Smarty.class.php');
+require('libs/Smarty.class.php');
 $smarty = new Smarty();
 
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
+$smarty->cache_dir = 'cache';
+$smarty->config_dir = 'configs';
 
 function errorMensage($ErrorNumber){
     if ($ErrorNumber==0) {
