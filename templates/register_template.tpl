@@ -55,9 +55,11 @@
     </div>
 </nav>
 <div>
+    {if $Error >-1 }
     <div class="alert alert-danger">
+        {/if}
     </div>
-<form method="POST" ACTION="register_action.php">
+<form method="POST" action="register_action.php">
     <div class="container text-center">
         <div class="row content">
             <div class="col-sm-2 sidenav">
