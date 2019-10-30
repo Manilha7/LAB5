@@ -21,7 +21,6 @@ include 'db.php';
 
     
     $nrows  = mysql_num_rows($result);
-    print_r($nrows);
     if ($nrows>0) {
         $ErrorNumber=1;
         header("Location: register.php?Error=$ErrorNumberN&username=$username");
