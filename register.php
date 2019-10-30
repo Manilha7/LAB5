@@ -13,10 +13,7 @@ function errorMensage($ErrorNumber){
     }
 }	
 	
-	if (isset($_POST['ErrorNumber'])) {
-		$username=$_SESSION['username'];
-     	$email=$_SESSION['email'];
-	}
+
 	$smarty ->assign("ErrorNumber",$_POST['ErrorNumber']);
 	$smarty ->assign("username","$username");
 	$smarty ->assign("email","$email");
@@ -27,4 +24,10 @@ function errorMensage($ErrorNumber){
     $smarty->assign("MENU_3","Login");
     $smarty->display('register_template.tpl');
     $smarty->assign("MENU_3","Login");
+
+
+    if (isset($_POST['ErrorNumber'])) {
+		$username=$_POST['username'];
+     	$email=$_POST['email'];
+	}
 ?>
