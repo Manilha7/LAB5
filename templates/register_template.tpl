@@ -50,10 +50,15 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="register.php">{$MENU_2}</a></li>
                 <li><a href="#">{$MENU_3}</a></li>
+                 <div class="alert alert-danger">
             </ul>
         </div>
     </div>
 </nav>
+<div>
+  {if $Error >=0}
+    <div class="alert alert-danger">
+</div>
 <form method="POST" ACTION="register_action.php">
     <div class="container text-center">
         <div class="row content">
