@@ -10,7 +10,8 @@ include 'db.php';
     // Process signup submission
     $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 
-
+    mysql_close($db);
+    
     if ($db) {
     $username  = $_POST['username'];
     $email    = $_POST['email'];
@@ -44,14 +45,12 @@ include 'db.php';
        header("Location: register.php?Error=$ErrorNumber");
     }
     else{
-        $sql_insert = "INSERT INTO users(name, email, created_at, updated_at, password_digest) VALUES('$username','$email',NOW(),NOW(),'$password_final')";
+        $sql_insert = "INSERT INTO users(name, email, password_digest, created_at, updated_at,) VALUES('$username','$email','$password_final',NOW(),NOW())";
         $ins= @ mysql_query($sql_insert,$db); 
         header("Location: register_success.html");
         }
     }
 
-    
-    mysql_close($db);
 
 
 ?>
