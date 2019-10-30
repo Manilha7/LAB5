@@ -10,8 +10,7 @@ include 'db.php';
     // Process signup submission
     $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 
-    mysql_close($db);
-    
+
     if ($db) {
     $username  = $_POST['username'];
     $email    = $_POST['email'];
@@ -51,6 +50,7 @@ include 'db.php';
         }
     }
 
+    mysql_close($db);
 
 
 ?>
