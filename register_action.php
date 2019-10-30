@@ -18,9 +18,9 @@ include 'db.php';
     $password_corfirmed= $_POST['password-confirmed'];
     $password_final= substr(md5($_POST['password']),0,32);
     $email = "a@test";
-    $queryemail =" SELECT * from users where email= '$email'";
+    $queryemail =" SELECT * from users where email='$email'";
 
-    if(!($result= @ mysql_select_db($queryemail,$db))){
+    if(!($result= @ mysql_query($queryemail,$db))){
         showerror();
     }
     $nrows  = mysql_num_rows($result);
