@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 // put full path to Smarty.class.php
 require_once('/usr/share/php/smarty/libs/Smarty.class.php');
 $smarty = new Smarty();
@@ -19,5 +17,6 @@ function errorMensage($ErrorType){
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");
-    $smarty->display('signup_template.tpl');
+    $smarty->display('register_template.tpl');
+    $smarty->assign("MENU_3","Login")
 ?>
