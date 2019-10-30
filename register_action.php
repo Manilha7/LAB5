@@ -19,10 +19,12 @@ include 'db.php';
     $password_final= substr(md5($_POST['password']),0,32);
            
     $queryemail=" SELECT * from users where email= $email";
+
     if(!($result= @ mysql_select_db($queryemail,$db))){
         showerror();
     }
     $nrows  = mysql_num_rows($result);
+    print_r($nrows);
     if ($nrows>0) {
         $Error=1;
         header("Location: register.php?Error=$Error&username=$username");
