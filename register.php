@@ -14,9 +14,9 @@ function errorMensage($ErrorNumber){
 }	
 	
 	
-    if (!empty($ErrorNumber)) {
-		$username=$_POST['username'];
-     	$email=$_POST['email'];
+    if (isset($_POST['ErrorNumber'])) {
+		$username='username';
+     	$email='email';
 	}	
 
 
