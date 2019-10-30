@@ -12,12 +12,12 @@ function errorMensage($ErrorNumber){
         
     }
 }	
-	$smarty ->assign("ErrorNumber",$_POST['ErrorNumber']);
+	
 	if ($ErrorNumber>-1) {
 		$username=$_POST['username'];
      	$email=$_POST['email'];
 	}
-
+	$smarty ->assign("ErrorNumber",$_POST['ErrorNumber']);
 	$smarty ->assign("username","$username");
 	$smarty ->assign("email","$email");
 	$smarty ->assign("password","");
