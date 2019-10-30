@@ -36,7 +36,7 @@ include 'db.php';
 
     elseif (empty($password) || empty($password_corfirmed)) {
         $ErrorNumber=3;
-      header("Location: register.php?Error=$ErrorNumber&Email=$Email&Username=$Username"); 
+      header("Location: register.php?Error=$ErrorNumber&Email=$Email&username=$username"); 
     }
 
     elseif (empty($password) && empty($password_corfirmed) && empty($username) && empty(email)) {
