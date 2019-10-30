@@ -14,8 +14,8 @@ function errorMensage($ErrorNumber){
 }	
 	
 	if (isset($_POST['ErrorNumber'])) {
-		$username=$_POST['username'];
-     	$email=$_POST['email'];
+		$username=$_SESSION['username'];
+     	$email=$_SESSION['email'];
 	}
 	$smarty ->assign("ErrorNumber",$_POST['ErrorNumber']);
 	$smarty ->assign("username","$username");
