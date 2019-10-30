@@ -55,7 +55,7 @@
     </div>
 </nav>
 <div>
-    {if $Error >-1 }
+    {if $ErrorNumber >-1 }
     <div class="alert alert-danger">
         {/if}
     </div>
