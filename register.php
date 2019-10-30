@@ -13,7 +13,7 @@ function errorMensage($ErrorNumber){
     }
 }	
 	
-	if (isset($_POST["$ErrorNumber"])) {
+	if (isset($ErrorNumber)) {
 		$username=$_POST['username'];
      	$email=$_POST['email'];
 	}
