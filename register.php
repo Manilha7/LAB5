@@ -7,8 +7,8 @@ $smarty = new Smarty();
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
 
-function errorMensage($ErrorNumber){
-    if ($ErrorNumber==0) {
+function errorMensage($Error){
+    if ($Error==0) {
         
     }
 }	
