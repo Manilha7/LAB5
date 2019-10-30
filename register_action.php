@@ -19,9 +19,7 @@ include 'db.php';
     $password_final= substr(md5($_POST['password']),0,32);
     $queryemail =" SELECT * from users where email='$email'";
 
-    if(!($result= @ mysql_query($queryemail,$db))){
-        showerror();
-    }
+    
     $nrows  = mysql_num_rows($result);
     print_r($nrows);
     if ($nrows>0) {
@@ -49,8 +47,5 @@ include 'db.php';
         header("Location: register_success.html");
         }
     }
-
-    mysql_close($db);
-
 
 ?>
