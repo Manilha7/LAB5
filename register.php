@@ -13,6 +13,12 @@ function errorMensage($ErrorNumber){
     }
 }	
 	
+	
+    if (!empty($ErrorNumber)) {
+		$username=$_POST['username'];
+     	$email=$_POST['email'];
+	}	
+
 
 	$smarty ->assign("ErrorNumber",$_POST['ErrorNumber']);
 	$smarty ->assign("username","$username");
@@ -26,8 +32,4 @@ function errorMensage($ErrorNumber){
     $smarty->assign("MENU_3","Login");
 
 
-    if (isset($_POST['ErrorNumber'])) {
-		$username=$_POST['username'];
-     	$email=$_POST['email'];
-	}
 ?>
