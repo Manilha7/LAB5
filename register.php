@@ -16,14 +16,14 @@ function errorMensage($ErrorNumber){
 }	
 	
 	
-    if (isset($_GET['ErrorNumber'])) {
+    if (isset($_GET['Error'])) {
     	print_r($_GET);
 		$username=$_GET['username'];
      	$email=$_GET['email'];
 	}	
 
 
-	$smarty ->assign("ErrorNumber",$_POST['ErrorNumber']);
+	$smarty ->assign("ErrorNumber",$_GET['Error']);
 	$smarty ->assign("username","$username");
 	$smarty ->assign("email","$email");
 
