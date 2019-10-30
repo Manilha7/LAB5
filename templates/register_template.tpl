@@ -63,7 +63,7 @@
                 <h1>Register</h1>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input id="user" type="text" class="form-control" name="username" placeholder="Username" value="{$name}" >
+                    <input id="user" type="text" class="form-control" name="username" placeholder="Username" value="{$username}" >
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
