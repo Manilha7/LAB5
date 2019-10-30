@@ -43,7 +43,7 @@ include 'db.php';
     }
     else{
         $sql_insert = "INSERT INTO users(name, email, password_digest, created_at, updated_at) VALUES('$username','$email','$password_final',NOW(),NOW())";
-        if(!($result = @ mysql_query($insert,$db)))
+        if(!($result = @ mysql_query($sql_insert,$db)))
    			showerror(); 
         header("Location: register_success.html");
         }
