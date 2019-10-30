@@ -41,7 +41,7 @@ include 'db.php';
     elseif (empty($password) && empty($password_corfirmed) && empty($username) && empty(email)) {
        $Error=0;
        header("Location: register.php?Error=$Error");
-    
+    }
     else{
         $sql_insert = "INSERT INTO users(name, email, created_at, updated_at, password_digest) VALUES('$username','$email',NOW(),NOW(),'$password_final')"; 
         header("Location: register_sucess.html");
