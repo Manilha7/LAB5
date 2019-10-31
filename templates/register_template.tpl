@@ -55,7 +55,7 @@
     </div>
 </nav>
 <div>
-    {if $ErrorNumber > -1 }
+    {if isset($MensageError)}
     <div class="alert alert-danger">
         <p style="text-align: center">{$MensageError}</p>
     </div>
