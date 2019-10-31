@@ -6,7 +6,7 @@ $smarty = new Smarty();
 
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
-
+$MensageError=errorMensage($_GET['$Error'])
 function errorMensage($Error){
     if ($Error==0) {
         $MensageError= "Todos os campos devem ser preenchidos";
@@ -23,6 +23,7 @@ function errorMensage($Error){
     elseif ($Error==4) {
     	$MensageError="Passwords não coincidem";
     }
+    return $MensageError;
 }	
 	
 	
