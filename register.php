@@ -39,7 +39,7 @@ $MessageError=errorMensage($_GET['$Error']);
 	
 
 
-
+	print_r($MessageError);
 	//$smarty->assign("Error",$_GET['Error']);
 	$smarty->assign("username",$username);
 	$smarty->assign("email",$email);
