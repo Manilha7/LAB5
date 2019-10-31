@@ -25,7 +25,7 @@ function errorMensage($Error){
     }
     else
     	return 0;
-    return $MensageError;
+    return $MessageError;
 }	
 	
 	
