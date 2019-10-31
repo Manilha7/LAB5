@@ -15,29 +15,28 @@ if (isset($_GET['Error'])) {
 
 
 
-function errorMensage($Error){
+function errorMessage($Error){
+
     if ($Error==0) {
-        $MessageError= "Todos os campos devem ser preenchidos";
+        return "Todos os campos devem ser preenchidos";
     }
     elseif ($Error==1) {
-    	 $MessageError=  "Email já existe na base de dados";
+    	 return  "Email já existe na base de dados";
     }
     elseif ($Error==2) {
-    	$MessageError= "Email tem formato incorrecto";
+    	return "Email tem formato incorrecto";
     }
     elseif ($Error==3) {
-    	$MessageError= "Password em branco";
+    	return "Password em branco";
     }
     elseif ($Error==4) {
-    	$MessageError="Passwords não coincidem";
-    }
-    else
-    	return -1;
-    return $MessageError;
+    	 return "Passwords não coincidem";
+    } else return "Error desconhecido";
 }
-print_r($_GET['Error']);
-$MessageError=errorMensage($_GET['Error']);
-	
+
+if(isset($_GET['Error']))
+    $MessageError=errorMessage($_GET['Error']);
+else $MessageError = -1;
 
 
 	print_r($MessageError);
