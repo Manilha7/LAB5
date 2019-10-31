@@ -113,6 +113,11 @@
         <div class="media-left">
             <img src="https://www.w3schools.com/bootstrap/img_avatar3.png" class="media-object" style="width:60px">
         </div>
+        <div class="media-right">
+            <button type="button" class="btn btn-success" style="width: 90%"><span class="glyphicon glyphicon-arrow-up"></span>&nbsp;{$base.upvotes}</button>
+
+            <button type="button" class="btn btn-danger" style="width: 90%"> <span class="glyphicon glyphicon-arrow-down"></span>&nbsp;{$base.downvotes}</button>
+        </div>
         <div class="media-body">
             <h4 class="media-heading">{$base.name} <small><i> Data de modificação: {$base.updated_at}  </i></small></h4>
             <p> {$base.content}</p>
