@@ -33,7 +33,7 @@ function errorMensage($Error){
 	}	
 
 
-	$smarty->assign("Error",$_GET['$Error']);
+	$smarty->assign("Error",$_GET['Error']);
 	$smarty->assign("username",$username);
 	$smarty->assign("email",$email);
 	$smarty->assign("MessageError",$MessageError);
