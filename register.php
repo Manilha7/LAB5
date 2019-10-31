@@ -34,8 +34,9 @@ function errorMensage($Error){
     else
     	return -1;
     return $MessageError;
-}	
-$MessageError=errorMensage($_GET['$Error']);
+}
+print_r($_GET['Error']);
+$MessageError=errorMensage($_GET['Error']);
 	
 
 
