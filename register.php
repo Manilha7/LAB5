@@ -6,7 +6,15 @@ $smarty = new Smarty();
 
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
-$MensageError=errorMensage($_GET['$Error']);
+
+
+if (isset($_GET['Error'])) {
+	$username=$_GET['username'];
+     $email=$_GET['email'];
+}	
+
+
+
 function errorMensage($Error){
     if ($Error==0) {
         $MessageError= "Todos os campos devem ser preenchidos";
@@ -27,23 +35,20 @@ function errorMensage($Error){
     	return 0;
     return $MessageError;
 }	
+$MessageError=errorMensage($_GET['$Error']);
 	
-	
-    if (isset($_GET['Error'])) {
-		$username=$_GET['username'];
-     	$email=$_GET['email'];
-	}	
 
 
-	$smarty->assign("Error",$_GET['Error']);
+
+	//$smarty->assign("Error",$_GET['Error']);
 	$smarty->assign("username",$username);
 	$smarty->assign("email",$email);
 	$smarty->assign("MessageError",$MessageError);
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");
-    $smarty->display('register_template.tpl');
     $smarty->assign("MENU_3","Login");
+    $smarty->display('register_template.tpl');
 
 
 ?>

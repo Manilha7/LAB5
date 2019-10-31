@@ -55,11 +55,11 @@
     </div>
 </nav>
 <div>
-    {if $Error >=-1}
+    {if $MessageError!=0}
     <div class="alert alert-danger">
         <p style="text-align: center">{$MessageError}</p>
     </div>
-        {/if}
+    {/if}
     </div>
 <form method="POST" action="register_action.php">
     <div class="container text-center">
