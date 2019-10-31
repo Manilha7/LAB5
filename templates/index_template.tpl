@@ -107,7 +107,7 @@
 </div>
 <!-- Left-aligned media object -->
 
-<div class="container-fluid bg-success">
+<div class="container">
     {foreach item=base from=$baseLab4}
     <div class="media">
 
