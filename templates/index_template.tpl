@@ -110,7 +110,6 @@
 <div class="container">
     {foreach item=base from=$baseLab4}
     <div class="media">
-    	<div class="alert alert-dark">
         <div class="media-left">
             <img src="https://www.w3schools.com/bootstrap/img_avatar3.png" class="media-object" style="width:60px">
         </div>
@@ -120,7 +119,6 @@
             <div class="text-right">
                 <h4><small><i> Data de criação:  {$base.created_at}</i></small></h4>
             </div>
-        </div>
     </div>
     <hr>
     {/foreach}
