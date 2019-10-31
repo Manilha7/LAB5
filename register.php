@@ -32,10 +32,10 @@ function errorMensage($Error){
 	}	
 
 
-	$smarty ->assign("ErrorNumber",$_GET['Error']);
-	$smarty ->assign("username","$username");
-	$smarty ->assign("email","$email");
-
+	$smarty->assign("ErrorNumber",$_GET['Error']);
+	$smarty->assign("username",$username);
+	$smarty->assign("email",$email);
+	$smarty->assign("MensageError",$MensageError)
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");
