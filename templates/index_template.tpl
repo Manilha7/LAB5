@@ -109,13 +109,13 @@
 
 <div class="container">
     {foreach item=base from=$baseLab4}
-    <div class="card">
+    <div class="media">
 
-        <div class="card-left">
+        <div class="media-left">
             <img src="https://www.w3schools.com/bootstrap/img_avatar3.png" class="media-object" style="width:60px">
         </div>
-        <div class="card-body">
-            <h4 class="card-heading">{$base.name} <small><i> Data de modificação: {$base.updated_at}  </i></small></h4>
+        <div class="media-body">
+            <h4 class="media-heading">{$base.name} <small><i> Data de modificação: {$base.updated_at}  </i></small></h4>
             <p> {$base.content}</p>
             <div class="text-right">
                 <h4><small><i> Data de criação:  {$base.created_at}</i></small></h4>
