@@ -22,8 +22,7 @@ include 'db.php';
     
     $nrows  = mysql_num_rows($result);
     if ($nrows>0) {
-        $Error=1;
-        header("Location: register.php?Error=$Error&username=$username");
+        header("Location: register.php?Error=1&username=$username");
     }
 
     elseif ($password!=$password_corfirmed) {

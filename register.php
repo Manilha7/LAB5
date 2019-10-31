@@ -32,7 +32,7 @@ function errorMensage($Error){
     	$MessageError="Passwords não coincidem";
     }
     else
-    	return 0;
+    	return -1;
     return $MessageError;
 }	
 $MessageError=errorMensage($_GET['$Error']);
