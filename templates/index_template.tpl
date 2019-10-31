@@ -118,8 +118,10 @@
             <p> {$base.content}</p>
             <div class="text-right">
                 <h4><small><i> Data de criação:  {$base.created_at}</i></small></h4>
-            </div>
-    </div>
+         </div>
+   	</div>
+</div>
+
     <hr>
     {/foreach}
 
