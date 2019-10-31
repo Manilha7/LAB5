@@ -9,19 +9,19 @@ $smarty->compile_dir = 'templates_c';
 $MensageError=errorMensage($_GET['$Error']);
 function errorMensage($Error){
     if ($Error==0) {
-        $MensageError= "Todos os campos devem ser preenchidos";
+        $MessageError= "Todos os campos devem ser preenchidos";
     }
     elseif ($Error==1) {
-    	 $MensageError=  "Email já existe na base de dados";
+    	 $MessageError=  "Email já existe na base de dados";
     }
     elseif ($Error==2) {
-    	$MensageError= "Email tem formato incorrecto";
+    	$MessageError= "Email tem formato incorrecto";
     }
     elseif ($Error==3) {
-    	$MensageError= "Password em branco";
+    	$MessageError= "Password em branco";
     }
     elseif ($Error==4) {
-    	$MensageError="Passwords não coincidem";
+    	$MessageError="Passwords não coincidem";
     }
     return $MensageError;
 }	
@@ -33,10 +33,10 @@ function errorMensage($Error){
 	}	
 
 
-	
+	$smarty->assign("Error",$_GET['$Error']);
 	$smarty->assign("username",$username);
 	$smarty->assign("email",$email);
-	$smarty->assign("MensageError",$MensageError);
+	$smarty->assign("MessageError",$MessageError);
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");

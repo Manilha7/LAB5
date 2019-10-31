@@ -55,9 +55,9 @@
     </div>
 </nav>
 <div>
-    {if isset($MensageError)!=null}
+    {if isset($MessageError)!=null}
     <div class="alert alert-danger">
-        <p style="text-align: center">{$MensageError}</p>
+        <p style="text-align: center">{$MessageError}</p>
     </div>
         {/if}
     </div>
