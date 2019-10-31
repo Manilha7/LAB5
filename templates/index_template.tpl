@@ -109,7 +109,7 @@
 
 <div class="container">
     {foreach item=base from=$baseLab4}
-    <div class="media">
+    <div class="media" style="background-color:#0099ff">
         <div class="media-left">
             <img src="https://www.w3schools.com/bootstrap/img_avatar3.png" class="media-object" style="width:60px">
         </div>
