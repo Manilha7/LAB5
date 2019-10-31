@@ -23,6 +23,8 @@ function errorMensage($Error){
     elseif ($Error==4) {
     	$MessageError="Passwords não coincidem";
     }
+    else
+    	return 0;
     return $MensageError;
 }	
 	
